@@ -21,6 +21,6 @@ public class TestMyArray {
 		arr.insert(10);
 		arr.display();
 		
-		System.out.println(arr.binarySearch(30));
+		System.out.println(arr.binarySearch(10));
 	}
 }

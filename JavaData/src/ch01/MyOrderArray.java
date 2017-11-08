@@ -1,8 +1,8 @@
 package ch01;
-
+//æœ‰åºæ•°ç»„
 public class MyOrderArray {
 	private long[] arr;
-	//±íÊ¾ÓÐÐ§Êý¾ÝµÄ³¤¶È
+	//è¡¨ç¤ºæœ‰æ•ˆæ•°æ®çš„é•¿åº¦
 	private int elements;
 	
 	public MyOrderArray() {
@@ -14,7 +14,7 @@ public class MyOrderArray {
 	}
 	
 	/**
-	 * Ìí¼ÓÊý¾Ý
+	 * æ·»åŠ æ•°æ®ï¼Œå¹¶ä¸”æŽ’åºå¹¶ä¸”æŽ’åºå¹¶ä¸”æŽ’åºå¹¶ä¸”æŽ’åºå¹¶ä¸”æŽ’åº
 	 */
 	public void insert(long value) {
 		int i;
@@ -32,7 +32,7 @@ public class MyOrderArray {
 	}
 	
 	/**
-	 * ÏÔÊ¾Êý¾Ý
+	 * æ˜¾ç¤ºæ•°æ®
 	 */
 	public void display() {
 		System.out.print("[");
@@ -43,7 +43,7 @@ public class MyOrderArray {
 	}
 	
 	/**
-	 * ²éÕÒÊý¾Ý
+	 * æŸ¥æ‰¾æ•°æ®
 	 */
 	public int search(long value) {
 		int i;
@@ -62,7 +62,7 @@ public class MyOrderArray {
 	}
 	
 	/**
-	 * ¶þ·Ö·¨²éÕÒÊý¾Ý
+	 * äºŒåˆ†æ³•æŸ¥æ‰¾æ•°æ®ï¼ŒæŸ¥æ‰¾å€¼çš„ç´¢å¼•
 	 */
 	public int binarySearch(long value) {
 		int middle = 0;
@@ -87,7 +87,7 @@ public class MyOrderArray {
 	
 	
 	/**
-	 * ²éÕÒÊý¾Ý£¬¸ù¾ÝË÷ÒýÀ´²é
+	 * æŸ¥æ‰¾æ•°æ®ï¼Œæ ¹æ®ç´¢å¼•æ¥æŸ¥
 	 */
 	public long get(int index) {
 		if(index >= elements || index < 0) {
@@ -98,7 +98,7 @@ public class MyOrderArray {
 	}
 	
 	/**
-	 * É¾³ýÊý¾Ý
+	 * åˆ é™¤æ•°æ®
 	 */
 	public void delete(int index) {
 		if(index >= elements || index < 0) {
@@ -112,7 +112,7 @@ public class MyOrderArray {
 	}
 	
 	/**
-	 * ¸üÐÂÊý¾Ý
+	 * æ›´æ–°æ•°æ®
 	 */
 	public void change(int index, int newvalue) {
 		if(index >= elements || index < 0) {

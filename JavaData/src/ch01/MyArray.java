@@ -1,9 +1,9 @@
 package ch01;
 
 public class MyArray {
-	private long[] arr;
-	//±íÊ¾ÓĞĞ§Êı¾İµÄ³¤¶È
-	private int elements;
+	private long[] arr; //æœªåˆå§‹åŒ–æ—¶ä¸ºnull
+	//è¡¨ç¤ºæœ‰æ•ˆæ•°æ®çš„é•¿åº¦
+	private int elements;//æœªåˆå§‹åŒ–ä¸º0ï¼Œç´¢å¼•å€¼
 	
 	public MyArray() {
 		arr = new long[50];
@@ -12,9 +12,9 @@ public class MyArray {
 	public MyArray(int maxsize) {
 		arr = new long[maxsize];
 	}
-	
+//	æ·»åŠ ç±»æ–¹æ³•æ¥å®ç°æ•°æ®æ“ä½œ
 	/**
-	 * Ìí¼ÓÊı¾İ
+	 * æ·»åŠ æ•°æ®
 	 */
 	public void insert(long value) {
 		arr[elements] = value;
@@ -22,7 +22,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * ÏÔÊ¾Êı¾İ
+	 * æ˜¾ç¤ºæ•°æ®
 	 */
 	public void display() {
 		System.out.print("[");
@@ -33,13 +33,13 @@ public class MyArray {
 	}
 	
 	/**
-	 * ²éÕÒÊı¾İ
+	 * æŸ¥æ‰¾æ•°æ®ï¼ˆæ ¹æ®å€¼æ¥æŸ¥æ‰¾ç´¢å¼•ï¼‰
 	 */
 	public int search(long value) {
 		int i;
 		for(i = 0; i < elements; i++) {
 			if(value == arr[i]) {
-				break;
+				break; //æ‰¾åˆ°ç´¢å¼•ï¼Œé€€å‡º
 			}
 		}
 		
@@ -52,10 +52,17 @@ public class MyArray {
 	}
 	
 	/**
-	 * ²éÕÒÊı¾İ£¬¸ù¾İË÷ÒıÀ´²é
+	 * æŸ¥æ‰¾æ•°æ®ï¼Œæ ¹æ®ç´¢å¼•æ¥æŸ¥
 	 */
-	public long get(int index) {
-		if(index >= elements || index < 0) {
+//	public long get(int index) {
+//		if(index >= elements || index < 0) {
+//			throw new ArrayIndexOutOfBoundsException();
+//		} else {
+//			return arr[index];
+//		}
+//	}
+	public long get(int index){
+		if(index >=elements || index <0){
 			throw new ArrayIndexOutOfBoundsException();
 		} else {
 			return arr[index];
@@ -63,7 +70,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * É¾³ıÊı¾İ
+	 * åˆ é™¤æ•°æ®
 	 */
 	public void delete(int index) {
 		if(index >= elements || index < 0) {
@@ -77,7 +84,7 @@ public class MyArray {
 	}
 	
 	/**
-	 * ¸üĞÂÊı¾İ
+	 * æ›´æ–°æ•°æ®
 	 */
 	public void change(int index, int newvalue) {
 		if(index >= elements || index < 0) {
