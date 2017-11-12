@@ -15,9 +15,12 @@ public class TestSort {
 		}
 		System.out.print("]");
 		System.out.println();
-		
-		InsertSort.sort(arr);
-		
+		// 冒泡拍序，选择排序，插入排序
+		BubbleSort.sort(arr);
+//		InsertSort.sort(arr);
+//		SelectionSort.sort(arr);
+
+		System.out.print("排序后：\n");
 		System.out.print("[");
 		for(long num : arr) {
 			System.out.print(num + " ");
