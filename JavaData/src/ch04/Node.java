@@ -1,11 +1,11 @@
 package ch04;
 /*
- * Á´½áµã£¬Ïàµ±ÓÚÊÇ³µÏá
+ * é“¾ç»“ç‚¹ï¼Œç›¸å½“äºæ˜¯è½¦å¢
  */
 public class Node {
-	//Êı¾İÓò
+	//æ•°æ®åŸŸ
 	public long data;
-	//Ö¸ÕëÓò
+	//æŒ‡é’ˆåŸŸ
 	public Node next;
 	
 	public Node(long value) {
@@ -13,7 +13,7 @@ public class Node {
 	}
 	
 	/**
-	 * ÏÔÊ¾·½·¨
+	 * æ˜¾ç¤ºæ–¹æ³•
 	 */
 	public void display() {
 		System.out.print(data + " ");
