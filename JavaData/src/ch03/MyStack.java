@@ -1,12 +1,12 @@
 package ch03;
 
 public class MyStack {
-	//µ×²ãÊµÏÖÊÇÒ»¸öÊı×é
+	//åº•å±‚å®ç°æ˜¯ä¸€ä¸ªæ•°ç»„
 	private long[] arr;
 	private int top;
 	
 	/**
-	 * Ä¬ÈÏµÄ¹¹Ôì·½·¨
+	 * é»˜è®¤çš„æ„é€ æ–¹æ³•
 	 */
 	public MyStack() {
 		arr = new long[10];
@@ -14,7 +14,7 @@ public class MyStack {
 	}
 	
 	/**
-	 * ´ø²ÎÊı¹¹Ôì·½·¨£¬²ÎÊıÎªÊı×é³õÊ¼»¯´óĞ¡
+	 * å¸¦å‚æ•°æ„é€ æ–¹æ³•ï¼Œå‚æ•°ä¸ºæ•°ç»„åˆå§‹åŒ–å¤§å°
 	 */
 	public MyStack(int maxsize) {
 		arr = new long[maxsize];
@@ -22,35 +22,35 @@ public class MyStack {
 	}
 	
 	/**
-	 * Ìí¼ÓÊı¾İ
+	 * æ·»åŠ æ•°æ®
 	 */
 	public void push(int value) {
 		arr[++top] = value;
 	}
 	
 	/**
-	 * ÒÆ³ıÊı¾İ
+	 * ç§»é™¤æ•°æ®
 	 */
 	public long pop() {
 		return arr[top--];
 	}
 	
 	/**
-	 * ²é¿´Êı¾İ
+	 * æŸ¥çœ‹æ•°æ®
 	 */
 	public long peek() {
 		return arr[top];
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÎª¿Õ
+	 * åˆ¤æ–­æ˜¯å¦ä¸ºç©º
 	 */
 	public boolean isEmpty() {
 		return top == -1;
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÂúÁË
+	 * åˆ¤æ–­æ˜¯å¦æ»¡äº†
 	 */
 	public boolean isFull() {
 		return top == arr.length - 1;

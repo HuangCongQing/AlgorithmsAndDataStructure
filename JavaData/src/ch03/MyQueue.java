@@ -1,19 +1,19 @@
 package ch03;
 /*
- * ÁĞ¶ÓÀà
+ * åˆ—é˜Ÿç±»
  */
 public class MyQueue {
-	//µ×²ãÊ¹ÓÃÊı×é
+	//åº•å±‚ä½¿ç”¨æ•°ç»„
 	private long[] arr;
-	//ÓĞĞ§Êı¾İµÄ´óĞ¡
+	//æœ‰æ•ˆæ•°æ®çš„å¤§å°
 	private int elements;
-	//¶ÓÍ·
+	//é˜Ÿå¤´
 	private int front;
-	//¶ÓÎ²
+	//é˜Ÿå°¾
 	private int end;
 	
 	/**
-	 * Ä¬ÈÏ¹¹Ôì·½·¨
+	 * é»˜è®¤æ„é€ æ–¹æ³•
 	 */
 	public MyQueue() {
 		arr = new long[10];
@@ -23,7 +23,7 @@ public class MyQueue {
 	}
 	
 	/**
-	 * ´ø²ÎÊıµÄ¹¹Ôì·½·¨£¬²ÎÊıÎªÊı×éµÄ´óĞ¡
+	 * å¸¦å‚æ•°çš„æ„é€ æ–¹æ³•ï¼Œå‚æ•°ä¸ºæ•°ç»„çš„å¤§å°
 	 */
 	public MyQueue(int maxsize) {
 		arr = new long[maxsize];
@@ -33,7 +33,7 @@ public class MyQueue {
 	}
 	
 	/**
-	 * Ìí¼ÓÊı¾İ,´Ó¶ÓÎ²²åÈë
+	 * æ·»åŠ æ•°æ®,ä»é˜Ÿå°¾æ’å…¥
 	 */
 	public void insert(long value) {
 		arr[++end] = value;
@@ -41,7 +41,7 @@ public class MyQueue {
 	}
 	
 	/**
-	 * É¾³ıÊı¾İ£¬´Ó¶ÓÍ·É¾³ı
+	 * åˆ é™¤æ•°æ®ï¼Œä»é˜Ÿå¤´åˆ é™¤
 	 */
 	public long remove() {
 		elements--;
@@ -49,21 +49,21 @@ public class MyQueue {
 	}
 	
 	/**
-	 * ²é¿´Êı¾İ£¬´Ó¶ÓÍ·²é¿´
+	 * æŸ¥çœ‹æ•°æ®ï¼Œä»é˜Ÿå¤´æŸ¥çœ‹
 	 */
 	public long peek() {
 		return arr[front];
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÎª¿Õ
+	 * åˆ¤æ–­æ˜¯å¦ä¸ºç©º
 	 */
 	public boolean isEmpty() {
 		return elements == 0;
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÂúÁË
+	 * åˆ¤æ–­æ˜¯å¦æ»¡äº†
 	 */
 	public boolean isFull() {
 		return elements == arr.length;
