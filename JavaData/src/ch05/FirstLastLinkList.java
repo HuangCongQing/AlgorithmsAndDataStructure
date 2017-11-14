@@ -3,12 +3,12 @@ package ch05;
 import ch04.Node;
 
 /*
- * Ë«¶ËÁ´±í
+ * åŒç«¯é“¾è¡¨
  */
 public class FirstLastLinkList {
-	//Í·½áµã
+	//å¤´ç»“ç‚¹
 	private Node first;
-	//Î²½áµã
+	//å°¾ç»“ç‚¹
 	private Node last;
 	
 	public FirstLastLinkList() {
@@ -17,7 +17,7 @@ public class FirstLastLinkList {
 	}
 	
 	/**
-	 * ²åÈëÒ»¸ö½áµã£¬ÔÚÍ·½áµãºó½øĞĞ²åÈë
+	 * æ’å…¥ä¸€ä¸ªç»“ç‚¹ï¼Œåœ¨å¤´ç»“ç‚¹åè¿›è¡Œæ’å…¥
 	 */
 	public void insertFirst(long value) {
 		Node node = new Node(value);
@@ -29,7 +29,7 @@ public class FirstLastLinkList {
 	}
 	
 	/**
-	 * ²åÈëÒ»¸ö½áµã£¬´ÓÎ²½áµã½øĞĞ²åÈë
+	 * æ’å…¥ä¸€ä¸ªç»“ç‚¹ï¼Œä»å°¾ç»“ç‚¹è¿›è¡Œæ’å…¥
 	 */
 	public void insertLast(long value) {
 		Node node = new Node(value);
@@ -42,7 +42,7 @@ public class FirstLastLinkList {
 	}
 	
 	/**
-	 * É¾³ıÒ»¸ö½áµã£¬ÔÚÍ·½áµãºó½øĞĞÉ¾³ı
+	 * åˆ é™¤ä¸€ä¸ªç»“ç‚¹ï¼Œåœ¨å¤´ç»“ç‚¹åè¿›è¡Œåˆ é™¤
 	 */
 	public Node deleteFirst() {
 		Node tmp = first;
@@ -54,7 +54,7 @@ public class FirstLastLinkList {
 	}
 	
 	/**
-	 * ÏÔÊ¾·½·¨
+	 * æ˜¾ç¤ºæ–¹æ³•
 	 */
 	public void display() {
 		Node current = first;
@@ -66,7 +66,7 @@ public class FirstLastLinkList {
 	}
 	
 	/**
-	 * ²éÕÒ·½·¨
+	 * æŸ¥æ‰¾æ–¹æ³•
 	 */
 	public Node find(long value) {
 		Node current = first;
@@ -80,7 +80,7 @@ public class FirstLastLinkList {
 	}
 	
 	/**
-	 * É¾³ı·½·¨£¬¸ù¾İÊı¾İÓòÀ´½øĞĞÉ¾³ı
+	 * åˆ é™¤æ–¹æ³•ï¼Œæ ¹æ®æ•°æ®åŸŸæ¥è¿›è¡Œåˆ é™¤
 	 */
 	public Node delete(long value) {
 		Node current = first;
@@ -103,7 +103,7 @@ public class FirstLastLinkList {
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÎª¿Õ
+	 * åˆ¤æ–­æ˜¯å¦ä¸ºç©º
 	 */
 	public boolean isEmpty() {
 		return (first == null);
