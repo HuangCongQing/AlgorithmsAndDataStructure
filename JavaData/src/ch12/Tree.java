@@ -1,31 +1,31 @@
 package ch12;
 /*
- * ¶ş²æÊ÷Àà
+ * äºŒå‰æ ‘ç±»
  */
 public class Tree {
-	//¸ù½Úµã
+	//æ ¹èŠ‚ç‚¹
 	public Node root;
 	
 	/**
-	 * ²åÈë½Úµã
+	 * æ’å…¥èŠ‚ç‚¹
 	 * @param value
 	 */
 	public void insert(long value,String sValue) {
-		//·â×°½Úµã
+		//å°è£…èŠ‚ç‚¹
 		Node newNode = new Node(value,sValue);
-		//ÒıÓÃµ±Ç°½Úµã
+		//å¼•ç”¨å½“å‰èŠ‚ç‚¹
 		Node current = root;
-		//ÒıÓÃ¸¸½Úµã
+		//å¼•ç”¨çˆ¶èŠ‚ç‚¹
 		Node parent;
-		//Èç¹ûrootÎªnull£¬Ò²¾ÍÊÇµÚÒ»²åÈëµÄÊ±ºò
+		//å¦‚æœrootä¸ºnullï¼Œä¹Ÿå°±æ˜¯ç¬¬ä¸€æ’å…¥çš„æ—¶å€™
 		if(root == null) {
 			root = newNode;
 			return;
 		} else {
 			while(true) {
-				//¸¸½ÚµãÖ¸Ïòµ±Ç°½Úµã
+				//çˆ¶èŠ‚ç‚¹æŒ‡å‘å½“å‰èŠ‚ç‚¹
 				parent = current;
-				//Èç¹ûµ±Ç°Ö¸ÏòµÄ½ÚµãÊı¾İ±È²åÈëµÄÒª´ó,ÔòÏò×ó×ß
+				//å¦‚æœå½“å‰æŒ‡å‘çš„èŠ‚ç‚¹æ•°æ®æ¯”æ’å…¥çš„è¦å¤§,åˆ™å‘å·¦èµ°
 				if(current.data > value) {
 					current = current.leftChild;
 					if(current == null) {
@@ -44,21 +44,21 @@ public class Tree {
 	}
 	
 	/**
-	 * ²éÕÒ½Úµã
+	 * æŸ¥æ‰¾èŠ‚ç‚¹
 	 * @param value
 	 */
 	public Node find(long value) {
-		//ÒıÓÃµ±Ç°½Úµã£¬´Ó¸ù½Úµã¿ªÊ¼
+		//å¼•ç”¨å½“å‰èŠ‚ç‚¹ï¼Œä»æ ¹èŠ‚ç‚¹å¼€å§‹
 		Node current = root;
-		//Ñ­»·£¬Ö»Òª²éÕÒÖµ²»µÈÓÚµ±Ç°½ÚµãµÄÊı¾İÏî
+		//å¾ªç¯ï¼Œåªè¦æŸ¥æ‰¾å€¼ä¸ç­‰äºå½“å‰èŠ‚ç‚¹çš„æ•°æ®é¡¹
 		while(current.data != value) {
-			//½øĞĞ±È½Ï£¬±È½Ï²éÕÒÖµºÍµ±Ç°½ÚµãµÄ´óĞ¡
+			//è¿›è¡Œæ¯”è¾ƒï¼Œæ¯”è¾ƒæŸ¥æ‰¾å€¼å’Œå½“å‰èŠ‚ç‚¹çš„å¤§å°
 			if(current.data > value) {
 				current = current.leftChild;
 			} else {
 				current = current.rightChild;
 			}
-			//Èç¹û²éÕÒ²»µ½
+			//å¦‚æœæŸ¥æ‰¾ä¸åˆ°
 			if(current == null) {
 				return null;
 			}
@@ -67,7 +67,7 @@ public class Tree {
 	}
 	
 	/**
-	 * É¾³ı½Úµã
+	 * åˆ é™¤èŠ‚ç‚¹
 	 * @param value
 	 */
 	public void delte(long value) {
@@ -75,43 +75,43 @@ public class Tree {
 	}
 	
 	/**
-	 * Ç°Ğò±éÀú
+	 * å‰åºéå†
 	 */
 	public void frontOrder(Node localNode) {
 		if(localNode != null) {
-			//·ÃÎÊ¸ù½Úµã
+			//è®¿é—®æ ¹èŠ‚ç‚¹
 			System.out.println(localNode.data + ", " + localNode.sData);
-			//Ç°Ğò±éÀú×ó×ÓÊ÷
+			//å‰åºéå†å·¦å­æ ‘
 			frontOrder(localNode.leftChild);
-			//Ç°Ğò±éÀúÓÒ×ÓÊ÷
+			//å‰åºéå†å³å­æ ‘
 			frontOrder(localNode.rightChild);
 		}
 	}
 	
 	/**
-	 * ÖĞĞò±éÀú
+	 * ä¸­åºéå†
 	 */
 	public void inOrder(Node localNode) {
 		if(localNode != null) {
-			//ÖĞĞò±éÀú×ó×ÓÊ÷
+			//ä¸­åºéå†å·¦å­æ ‘
 			inOrder(localNode.leftChild);
-			//·ÃÎÊ¸ù½Úµã
+			//è®¿é—®æ ¹èŠ‚ç‚¹
 			System.out.println(localNode.data + ", " + localNode.sData);
-			//ÖĞÑ®±éÀúÓÒ×ÓÊ÷
+			//ä¸­æ—¬éå†å³å­æ ‘
 			inOrder(localNode.rightChild);
 		}
 	}
 	
 	/**
-	 * ºóĞò±éÀú
+	 * ååºéå†
 	 */
 	public void afterOrder(Node localNode) {
 		if(localNode != null) {
-			//ºóĞò±éÀú×ó×ÓÊ÷
+			//ååºéå†å·¦å­æ ‘
 			afterOrder(localNode.leftChild);
-			//ºóĞò±éÀúÓÒ×ÓÊ÷
+			//ååºéå†å³å­æ ‘
 			afterOrder(localNode.rightChild);
-			//·ÃÎÊ¸ù½Úµã
+			//è®¿é—®æ ¹èŠ‚ç‚¹
 			System.out.println(localNode.data + ", " + localNode.sData);
 		}
 	}
