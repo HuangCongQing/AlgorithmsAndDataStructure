@@ -1,13 +1,13 @@
 package ch10;
 /*
- * ¶ş²æÊ÷Àà
+ * äºŒå‰æ ‘ç±»
  */
 public class Tree {
-	//¸ù½Úµã
+	//æ ¹èŠ‚ç‚¹
 	private Node root;
 	
 	/**
-	 * ²åÈë½Úµã
+	 * æ’å…¥èŠ‚ç‚¹
 	 * @param value
 	 */
 	public void insert(long value) {
@@ -15,7 +15,7 @@ public class Tree {
 	}
 	
 	/**
-	 * ²éÕÒ½Úµã
+	 * æŸ¥æ‰¾èŠ‚ç‚¹
 	 * @param value
 	 */
 	public void find(long value) {
@@ -23,7 +23,7 @@ public class Tree {
 	}
 	
 	/**
-	 * É¾³ı½Úµã
+	 * åˆ é™¤èŠ‚ç‚¹
 	 * @param value
 	 */
 	public void delte(long value) {
