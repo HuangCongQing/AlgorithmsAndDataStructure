@@ -6,26 +6,26 @@ public class HashTable {
 	private LinkList[] arr;
 	
 	/**
-	 * Ä¬ÈÏµÄ¹¹Ôì·½·¨
+	 * é»˜è®¤çš„æ„é€ æ–¹æ³•
 	 */
 	public HashTable() {
 		arr = new LinkList[100];
 	}
 	
 	/**
-	 * Ö¸¶¨Êı×é³õÊ¼»¯´óĞ¡
+	 * æŒ‡å®šæ•°ç»„åˆå§‹åŒ–å¤§å°
 	 */
 	public HashTable(int maxSize) {
 		arr = new LinkList[maxSize];
 	}
 	
 	/**
-	 * ²åÈëÊı¾İ
+	 * æ’å…¥æ•°æ®
 	 */
 	public void insert(Info info) {
-		//»ñµÃ¹Ø¼ü×Ö
+		//è·å¾—å…³é”®å­—
 		String key = info.getKey();
-		//¹Ø¼ü×ÖËù×Ô¶¨µÄ¹şÏ£Êı
+		//å…³é”®å­—æ‰€è‡ªå®šçš„å“ˆå¸Œæ•°
 		int hashVal = hashCode(key);
 		if(arr[hashVal] == null) {
 			arr[hashVal] = new LinkList();
@@ -34,7 +34,7 @@ public class HashTable {
 	}
 	
 	/**
-	 * ²éÕÒÊı¾İ
+	 * æŸ¥æ‰¾æ•°æ®
 	 */
 	public Info find(String key) {
 		int hashVal = hashCode(key);
@@ -42,7 +42,7 @@ public class HashTable {
 	}
 	
 	/**
-	 * É¾³ıÊı¾İ
+	 * åˆ é™¤æ•°æ®
 	 * @param key
 	 * @return
 	 */

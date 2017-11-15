@@ -3,10 +3,10 @@ package ch17;
 public class TestHashTable {
 	public static void main(String[] args) {
 		HashTable ht = new HashTable();
-		ht.insert(new Info("a","张三"));
-		ht.insert(new Info("ct","李四"));
-		ht.insert(new Info("b","王五"));
-		ht.insert(new Info("dt","赵柳"));
+		ht.insert(new Info("a","寮犱笁"));
+		ht.insert(new Info("ct","鏉庡洓"));
+		ht.insert(new Info("b","鐜嬩簲"));
+		ht.insert(new Info("dt","璧垫煶"));
 		
 		System.out.println(ht.find("a").getName());
 		System.out.println(ht.find("ct").getName());

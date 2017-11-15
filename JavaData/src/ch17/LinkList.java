@@ -1,9 +1,9 @@
 package ch17;
 /*
- * Á´±í£¬Ïàµ±ÓÚ»ğ³µ
+ * é“¾è¡¨ï¼Œç›¸å½“äºç«è½¦
  */
 public class LinkList {
-	//Í·½áµã
+	//å¤´ç»“ç‚¹
 	private Node first;
 	
 	public LinkList() {
@@ -11,7 +11,7 @@ public class LinkList {
 	}
 	
 	/**
-	 * ²åÈëÒ»¸ö½áµã£¬ÔÚÍ·½áµãºó½øĞĞ²åÈë
+	 * æ’å…¥ä¸€ä¸ªç»“ç‚¹ï¼Œåœ¨å¤´ç»“ç‚¹åè¿›è¡Œæ’å…¥
 	 */
 	public void insertFirst(Info info) {
 		Node node = new Node(info);
@@ -20,7 +20,7 @@ public class LinkList {
 	}
 	
 	/**
-	 * É¾³ıÒ»¸ö½áµã£¬ÔÚÍ·½áµãºó½øĞĞÉ¾³ı
+	 * åˆ é™¤ä¸€ä¸ªç»“ç‚¹ï¼Œåœ¨å¤´ç»“ç‚¹åè¿›è¡Œåˆ é™¤
 	 */
 	public Node deleteFirst() {
 		Node tmp = first;
@@ -30,7 +30,7 @@ public class LinkList {
 	
 	
 	/**
-	 * ²éÕÒ·½·¨
+	 * æŸ¥æ‰¾æ–¹æ³•
 	 */
 	public Node find(String key) {
 		Node current = first;
@@ -44,7 +44,7 @@ public class LinkList {
 	}
 	
 	/**
-	 * É¾³ı·½·¨£¬¸ù¾İÊı¾İÓòÀ´½øĞĞÉ¾³ı
+	 * åˆ é™¤æ–¹æ³•ï¼Œæ ¹æ®æ•°æ®åŸŸæ¥è¿›è¡Œåˆ é™¤
 	 */
 	public Node delete(String key) {
 		Node current = first;
