@@ -3,18 +3,18 @@ package ch07;
 public class HanoiTower {
 	
 	/**
-	 * ÒÆ¶¯ÅÌ×Ó
-	 * topN:ÒÆ¶¯µÄÅÌ×ÓÊı
-	 * from:ÆğÊ¼Ëş×ù
-	 * inter:ÖĞ¼äËş×ù
-	 * to:Ä¿±êËş×ù
+	 * ç§»åŠ¨ç›˜å­
+	 * topN:ç§»åŠ¨çš„ç›˜å­æ•°
+	 * from:èµ·å§‹å¡”åº§
+	 * inter:ä¸­é—´å¡”åº§
+	 * to:ç›®æ ‡å¡”åº§
 	 */
 	public static void doTower(int topN,char from,char inter,char to) {
 		if(topN == 1) {
-			System.out.println("ÅÌ×Ó1,´Ó"+ from + "Ëş×ùµ½" + to + "Ëş×ù");
+			System.out.println("ç›˜å­1,ä»"+ from + "å¡”åº§åˆ°" + to + "å¡”åº§");
 		} else {
 			doTower(topN - 1, from, to, inter);
-			System.out.println("ÅÌ×Ó" + topN +",´Ó" + from + "Ëş×ùµ½" + to + "Ëş×ù" );
+			System.out.println("ç›˜å­" + topN +",ä»" + from + "å¡”åº§åˆ°" + to + "å¡”åº§" );
 			doTower(topN - 1, inter, from, to);
 		}
 	}
