@@ -1,19 +1,19 @@
 package ch09;
 /*
- * ¿ìËÙÅÅĞò
+ * å¿«é€Ÿæ’åº
  */
 public class QuickSort {
 
 	/**
-	 * »®·ÖÊı×é
+	 * åˆ’åˆ†æ•°ç»„
 	 */
 	public static int partition(long arr[],int left, int right,long point) {
 		int leftPtr = left - 1;
 		int rightPtr = right;
 		while(true) {
-			//Ñ­»·,½«±È¹Ø¼ü×ÖĞ¡µÄÁôÔÚ×ó¶Ë
+			//å¾ªç¯,å°†æ¯”å…³é”®å­—å°çš„ç•™åœ¨å·¦ç«¯
 			while(leftPtr < rightPtr && arr[++leftPtr] < point);
-			//Ñ­»·£¬½«±È¹Ø¼ü×Ö´óµÄÁôÔÚÓÒ¶Ë
+			//å¾ªç¯ï¼Œå°†æ¯”å…³é”®å­—å¤§çš„ç•™åœ¨å³ç«¯
 			while(rightPtr > leftPtr && arr[--rightPtr] > point);
 			if(leftPtr >= rightPtr) {
 				break;
@@ -23,7 +23,7 @@ public class QuickSort {
 				arr[rightPtr] = tmp;
 			}
 		}
-		//½«¹Ø¼ü×ÖºÍµ±Ç°leftPtrËùÖ¸µÄÕâÒ»¸ö½øĞĞ½»»»
+		//å°†å…³é”®å­—å’Œå½“å‰leftPtræ‰€æŒ‡çš„è¿™ä¸€ä¸ªè¿›è¡Œäº¤æ¢
 		long tmp = arr[leftPtr];
 		arr[leftPtr] =  arr[right];
 		arr[right] = tmp;
@@ -43,13 +43,13 @@ public class QuickSort {
 		if(right - left <= 0) {
 			return;
 		} else {
-			//ÉèÖÃ¹Ø¼ü×Ö
+			//è®¾ç½®å…³é”®å­—
 			long point = arr[right];
-			//»ñµÃÇĞÈëµã£¬Í¬Ê±¶ÔÊı×é½øĞĞ»®·Ö
+			//è·å¾—åˆ‡å…¥ç‚¹ï¼ŒåŒæ—¶å¯¹æ•°ç»„è¿›è¡Œåˆ’åˆ†
 			int partition = partition(arr, left, right, point);
-			//¶Ô×ó±ßµÄ×ÓÊı×é½øĞĞ¿ìËÙÅÅĞò
+			//å¯¹å·¦è¾¹çš„å­æ•°ç»„è¿›è¡Œå¿«é€Ÿæ’åº
 			sort(arr,left,partition - 1);
-			//¶ÔÓÒ±ßµÄ×ÓÊı×é½øĞĞ¿ìËÙÅÅĞò
+			//å¯¹å³è¾¹çš„å­æ•°ç»„è¿›è¡Œå¿«é€Ÿæ’åº
 			sort(arr,partition + 1, right);
 		}
 	}
