@@ -3,20 +3,20 @@ package ch20;
 import ch03.MyStack;
 
 /**
- * Í¼
+ * å›¾
  * @author Administrator
  *
  */
 public class Graph {
-	//¶¥µãÊı×é
+	//é¡¶ç‚¹æ•°ç»„
 	private Vertex[] vertexList;
-	//ÁÚ½Ó¾ØÕó
+	//é‚»æ¥çŸ©é˜µ
 	private int[][] adjMat;
-	//¶¥µãµÄ×î´óÊıÄ¿
+	//é¡¶ç‚¹çš„æœ€å¤§æ•°ç›®
 	private int maxSize = 20;
-	//µ±Ç°¶¥µã
+	//å½“å‰é¡¶ç‚¹
 	private int nVertex;
-	//Õ»
+	//æ ˆ
 	private MyStack stack;
 	
 	public Graph() {
@@ -32,14 +32,14 @@ public class Graph {
 	}
 	
 	/**
-	 * Ìí¼Ó¶¥µã
+	 * æ·»åŠ é¡¶ç‚¹
 	 */
 	public void addVertex(char label) {
 		vertexList[nVertex++] = new Vertex(label);
 	}
 	
 	/**
-	 * Ìí¼Ó±ß
+	 * æ·»åŠ è¾¹
 	 */
 	public void addEdge(int start,int end) {
 		adjMat[start][end] = 1;
@@ -56,17 +56,17 @@ public class Graph {
 	}
 	
 	public void dfs() {
-		//Ê×ÏÈ·ÃÎÊ0ºÅ¶¥µã
+		//é¦–å…ˆè®¿é—®0å·é¡¶ç‚¹
 		vertexList[0].wasVisited = true;
-		//ÏÔÊ¾¸Ã¶¥µã
+		//æ˜¾ç¤ºè¯¥é¡¶ç‚¹
 		displayVertex(0);
-		//Ñ¹ÈëÕ»ÖĞ
+		//å‹å…¥æ ˆä¸­
 		stack.push(0);
 		while(!stack.isEmpty()) {
-			//»ñµÃÒ»¸öÎ´·ÃÎÊ¹ıµÄÁÚ½Óµã
+			//è·å¾—ä¸€ä¸ªæœªè®¿é—®è¿‡çš„é‚»æ¥ç‚¹
 			int v = getadjUnvisitedVertex((int)stack.peek());
 			if(v == -1) {
-				//µ¯³öÒ»¸ö¶¥µã
+				//å¼¹å‡ºä¸€ä¸ªé¡¶ç‚¹
 				stack.pop();
 			} else {
 				vertexList[v].wasVisited = true;
@@ -75,7 +75,7 @@ public class Graph {
 			}
 		}
 		
-		//ËÑË÷ÍêÒÔºó£¬Òª½«·ÃÎÊĞÅÏ¢ĞŞ¸Ä
+		//æœç´¢å®Œä»¥åï¼Œè¦å°†è®¿é—®ä¿¡æ¯ä¿®æ”¹
 		for(int i = 0; i < nVertex; i++) {
 			vertexList[i].wasVisited = false;
 		}
@@ -87,17 +87,17 @@ public class Graph {
 	}
 	
 	public void mst() {
-		//Ê×ÏÈ·ÃÎÊ0ºÅ¶¥µã
+		//é¦–å…ˆè®¿é—®0å·é¡¶ç‚¹
 		vertexList[0].wasVisited = true;
-		//Ñ¹ÈëÕ»ÖĞ
+		//å‹å…¥æ ˆä¸­
 		stack.push(0);
 		while(!stack.isEmpty()) {
-			//µ±Ç°¶¥µã
+			//å½“å‰é¡¶ç‚¹
 			int currentVertex = (int)stack.peek();
-			//»ñµÃÒ»¸öÎ´·ÃÎÊ¹ıµÄÁÚ½Óµã
+			//è·å¾—ä¸€ä¸ªæœªè®¿é—®è¿‡çš„é‚»æ¥ç‚¹
 			int v = getadjUnvisitedVertex(currentVertex);
 			if(v == -1) {
-				//µ¯³öÒ»¸ö¶¥µã
+				//å¼¹å‡ºä¸€ä¸ªé¡¶ç‚¹
 				stack.pop();
 			} else {
 				vertexList[v].wasVisited = true;
@@ -110,7 +110,7 @@ public class Graph {
 			}
 		}
 		
-		//ËÑË÷ÍêÒÔºó£¬Òª½«·ÃÎÊĞÅÏ¢ĞŞ¸Ä
+		//æœç´¢å®Œä»¥åï¼Œè¦å°†è®¿é—®ä¿¡æ¯ä¿®æ”¹
 		for(int i = 0; i < nVertex; i++) {
 			vertexList[i].wasVisited = false;
 		}
