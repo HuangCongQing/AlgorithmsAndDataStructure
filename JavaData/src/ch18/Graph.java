@@ -1,17 +1,17 @@
 package ch18;
 /**
- * Í¼
+ * å›¾
  * @author Administrator
  *
  */
 public class Graph {
-	//¶¥µãÊı×é
+	//é¡¶ç‚¹æ•°ç»„
 	private Vertex[] vertexList;
-	//ÁÚ½Ó¾ØÕó
+	//é‚»æ¥çŸ©é˜µ
 	private int[][] adjMat;
-	//¶¥µãµÄ×î´óÊıÄ¿
+	//é¡¶ç‚¹çš„æœ€å¤§æ•°ç›®
 	private int maxSize;
-	//µ±Ç°¶¥µã
+	//å½“å‰é¡¶ç‚¹
 	private int nVertex;
 	
 	public Graph() {
@@ -26,14 +26,14 @@ public class Graph {
 	}
 	
 	/**
-	 * Ìí¼Ó¶¥µã
+	 * æ·»åŠ é¡¶ç‚¹
 	 */
 	public void addVertex(char label) {
 		vertexList[nVertex++] = new Vertex(label);
 	}
 	
 	/**
-	 * Ìí¼Ó±ß
+	 * æ·»åŠ è¾¹
 	 */
 	public void addEdge(int start,int end) {
 		adjMat[start][end] = 1;
