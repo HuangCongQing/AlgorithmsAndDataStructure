@@ -1,6 +1,6 @@
 package ch15;
 /**
- * Ô±¹¤ĞÅÏ¢Àà
+ * å‘˜å·¥ä¿¡æ¯ç±»
  * @author Administrator
  *
  */

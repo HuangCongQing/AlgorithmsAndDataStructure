@@ -6,28 +6,28 @@ public class HashTable {
 	private Info[] arr;
 	
 	/**
-	 * Ä¬ÈÏµÄ¹¹Ôì·½·¨
+	 * é»˜è®¤çš„æ„é€ æ–¹æ³•
 	 */
 	public HashTable() {
 		arr = new Info[100];
 	}
 	
 	/**
-	 * Ö¸¶¨Êı×é³õÊ¼»¯´óĞ¡
+	 * æŒ‡å®šæ•°ç»„åˆå§‹åŒ–å¤§å°
 	 */
 	public HashTable(int maxSize) {
 		arr = new Info[maxSize];
 	}
 	
 	/**
-	 * ²åÈëÊı¾İ
+	 * æ’å…¥æ•°æ®
 	 */
 	public void insert(Info info) {
 		arr[hashCode(info.getKey())] = info;
 	}
 	
 	/**
-	 * ²éÕÒÊı¾İ
+	 * æŸ¥æ‰¾æ•°æ®
 	 */
 	public Info find(String key) {
 		return arr[hashCode(key)];
