@@ -1,19 +1,19 @@
 package ch11;
 /*
- * ¶ş²æÊ÷½Úµã
+ * äºŒå‰æ ‘èŠ‚ç‚¹
  */
 public class Node {
-	//Êı¾İÏî
+	//æ•°æ®é¡¹
 	public long data;
-	//Êı¾İÏî
+	//æ•°æ®é¡¹
 	public String sData;
-	//×ó×Ó½Úµã
+	//å·¦å­èŠ‚ç‚¹
 	public Node leftChild;
-	//ÓÒ×Ó½Úµã
+	//å³å­èŠ‚ç‚¹
 	public Node rightChild;
 	
 	/**
-	 * ¹¹Ôì·½·¨
+	 * æ„é€ æ–¹æ³•
 	 * @param data
 	 */
 	public Node(long data,String sData) {
