@@ -1,21 +1,21 @@
 package ch08;
 /*
- * Ï£¶ûÅÅĞò
+ * å¸Œå°”æ’åº
  */
 public class ShellSort {
 	/**
-	 * ÅÅĞò·½·¨
+	 * æ’åºæ–¹æ³•
 	 */
 	public static void sort(long[] arr) {
-		//³õÊ¼»¯Ò»¸ö¼ä¸ô
+		//åˆå§‹åŒ–ä¸€ä¸ªé—´éš”
 		int h = 1;
-		//¼ÆËã×î´ó¼ä¸ô
+		//è®¡ç®—æœ€å¤§é—´éš”
 		while(h < arr.length / 3) {
 			h = h * 3 + 1;
 		}
 		
 		while(h > 0) {
-			//½øĞĞ²åÈëÅÅĞò
+			//è¿›è¡Œæ’å…¥æ’åº
 			long tmp = 0;
 			for(int i = h; i < arr.length; i++) {
 				tmp = arr[i];
@@ -26,7 +26,7 @@ public class ShellSort {
 				}
 				arr[j] = tmp;
 			}
-			//¼õĞ¡¼ä¸ô
+			//å‡å°é—´éš”
 			h = (h - 1) / 3;
 		}
 	}
