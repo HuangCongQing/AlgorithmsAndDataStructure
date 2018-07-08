@@ -1,6 +1,6 @@
 # AlgorithmsAndDataStructure
 算法数据结构代码 演习实践
-
+@ [ChungKing](https://github.com/HuangCongQing/AlgorithmsAndDataStructure)，若fork或star请注明来源
 
 # /JavaData中代码
 
@@ -34,7 +34,7 @@ https://www.bilibili.com/video/av13606008/
 *  [第19讲 - 图的搜索](/JavaData/src/ch19)
 *  [第20讲 - 图的最小生成树](/JavaData/src/ch20)
 
-LICENSE
+### License
+Copyright (c) [ChungKing](https://github.com/HuangCongQing/AlgorithmsAndDataStructure). All rights reserved.
 
-本项目全部内容遵守 MIT 许可协议.
-![](https://camo.githubusercontent.com/0cf016a535bd9d48eeddd9a867838339defd455a/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f343334303737322d313539363566646135636465303238312e706e673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430)
+Licensed under the MIT License.
