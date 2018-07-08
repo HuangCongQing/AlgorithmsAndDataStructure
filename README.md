@@ -2,12 +2,12 @@
 算法数据结构代码 演习实践
 @ [ChungKing](https://github.com/HuangCongQing/AlgorithmsAndDataStructure)，若fork或star请注明来源
 
+JAVA教程-数据结构和算法系列学习视频
+* https://www.bilibili.com/video/av13606008/
+
 # /JavaData中代码
 
 依据视频写的代码目录如下
-
-JAVA教程-数据结构和算法系列学习视频
-https://www.bilibili.com/video/av13606008/
 
 下面为相关代码
 
